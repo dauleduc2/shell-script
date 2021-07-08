@@ -1,0 +1,12 @@
+version: "3"
+services:
+        server:
+                image: heaty566/the-hood:latest
+                container_name: thehood1
+                networks:
+                        - reverse-proxy
+                expose:
+                        - 3000
+networks:
+        reverse-proxy:
+                external: true

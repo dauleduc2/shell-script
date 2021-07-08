@@ -1,0 +1,12 @@
+version: "3"
+services:
+        server:
+                image: heaty566/merci:latest
+                container_name: beheo
+                networks:
+                        - reverse-proxy
+                expose:
+                        - 3000
+networks:
+        reverse-proxy:
+                external: true
