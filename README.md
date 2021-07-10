@@ -33,6 +33,11 @@ ufw disable &&
 cd &&
 mkdir app &&
 cd app &&
+mkdir data &&
+cd data &&
+mkdir nginx &&
+cd nginx &&
+touch nginx.conf &&
 apt-get install vim &&
 wget -O install.sh http://www.aapanel.com/script/install-ubuntu_6.0_en.sh && sudo bash install.sh &&
 bt 14
@@ -50,6 +55,12 @@ bt 14
 
 ```json
 apt-get update && apt-get install docker-compose
+```
+
+## Restart
+
+```json
+ sudo systemctl start docker
 ```
 
 ## Log Container
