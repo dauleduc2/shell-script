@@ -69,6 +69,12 @@ apt-get update && apt-get install docker-compose
 docker logs <container>
 ```
 
+## Copy File From Container To Local Machine
+
+```json
+docker cp <dockerId>:/app/insideDocker ./localMachine
+```
+
 ## Running CMD into Container
 
 ```json
