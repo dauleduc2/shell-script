@@ -111,6 +111,23 @@ docker exec CONTAINER /usr/bin/mysqldump -u root --password=root DATABASE > back
 cat backup.sql | docker exec -i CONTAINER /usr/bin/mysql -u root --password=root DATABASE
 ```
 
+## Create User For A Database
+
+```json
+create LOGIN wallet WITH PASSWORD='123456789', CHECK_POLICY = OFF;
+
+USE master;
+GO
+DENY VIEW ANY DATABASE TO [wallet];
+
+
+
+USE master;
+GO
+ALTER AUTHORIZATION ON DATABASE::StudentWallet5 TO [wallet];
+GO
+```
+
 # Dos2unix
 
 ## Installation
